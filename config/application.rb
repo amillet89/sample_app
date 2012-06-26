@@ -33,6 +33,8 @@ module SampleApp
     # JavaScript files you want as :defaults (application.js is always included).
     # config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
 
+    config.active_record.whitelist_attributes = true
+    
     config.assets.enabled = true
 
     # Configure the default encoding used in templates for Ruby 1.9.
