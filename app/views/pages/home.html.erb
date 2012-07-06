@@ -42,9 +42,8 @@
   url = "http://www.economist.com/"
   doc = Nokogiri::HTML(open(url))
   
-  img = doc.css("title").text
-  %>
+  doc.css("img").each do |link| %>
   
-  <div> Scraped content here: <%= img %>  </div>
+  <div> Scraped content here: <%= link.content %>  </div> <% end %>
   
 <% end %>
