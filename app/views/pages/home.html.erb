@@ -32,5 +32,19 @@
                                 class: "btn btn-large btn-primary" %>
   </div>
 
-  <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
+  <!-- <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %> -->
+  
+  <%
+  require 'rubygems'
+  require 'nokogiri'
+  require 'open-uri'
+  
+  url = "http://www.economist.com/"
+  doc = Nokogiri::HTML(open(url))
+  
+  img = doc.at_css(".hero-image").text
+  %>
+  
+  <div> <%= img %> </div>
+  
 <% end %>
