@@ -45,6 +45,6 @@
   img = doc.css("img")
   %>
   
-  <div> Scraped content here: <% puts img %>  </div>
+  <div> Scraped content here: <%= img.to_html %>  </div>
   
 <% end %>
