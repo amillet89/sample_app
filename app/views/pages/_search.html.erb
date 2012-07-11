@@ -25,11 +25,6 @@
   
   select = @selector
   
-  if select.nil? %>
-  	<div> <h3> Scraped content:</h3> <br> <%= raw doc %>  </div>
-  	<% end 
-  	
-  else
   content = doc.css(select)
   %>
   <div> <h3> Scraped content:</h3> <br> <%= raw content %>  </div>
