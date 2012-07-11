@@ -44,14 +44,9 @@
   doc = Nokogiri::HTML(open(@url))
   
   select = @selector
-  
-  if select.nil? %>
-  <div> <h2> Scraped content: </h2> <br> <%= raw doc %>  </div>
-  
-  <% else
   content = doc.css(select)
   %>
-  <div> <h2> Scraped content here: </h2> <br> <%= raw content %>  </div>
+  <div> <h2> Scraped content:</h2> <br> <%= raw content %>  </div>
   
   
   <h2>
