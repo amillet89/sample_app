@@ -53,7 +53,7 @@
   
   select = @selector
   
-  if select.empty? || select.nil? %>
+  if select.nil? %>
   <div> <h2> Scraped content: </h2> <br> <%= raw doc %>  </div>
   
   <% else
