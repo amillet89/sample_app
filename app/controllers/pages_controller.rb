@@ -18,4 +18,10 @@ class PagesController < ApplicationController
   def help
     
   end
+  
+  def search
+  	@url = params[:q]
+  	render 'pages/search'
+  end
+  
 end

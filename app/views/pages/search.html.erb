@@ -22,7 +22,7 @@
   <div class="center hero-unit">
     <h1> Main Title Here: 
     
-   		 <%= form_tag({:controller => "pages", :action => "search"}, :method => "get") do %>
+   	    <%= form_tag({:controller => "pages", :action => "search"}, :method => "get") do %>
   			 <%= label_tag(:q, "Search for:") %>
  			 <%= text_field_tag(:q) %>
  			 <%= submit_tag("Search") %>
@@ -42,5 +42,16 @@
 
   <!-- <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %> -->
   
-    
+  <%
+  require 'rubygems'
+  require 'nokogiri'
+  require 'open-uri'
+ 
+  doc = Nokogiri::HTML(open(@url))
+  
+  img = doc.css("img")
+  %>
+  
+  <div> Scraped content here: <%= raw img %>  </div>
+  
 <% end %>
