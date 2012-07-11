@@ -22,6 +22,7 @@
   <div class="center hero-unit">
     <h1> My little scraping tool: 
     
+    	<br>
    		 <%= form_tag({:controller => "pages", :action => "search"}, :method => "get") do %>
   			 <%= label_tag(:url, "Enter a url, for e.g. 'http://www.yahoo.com'") %>
  			 <%= text_field_tag(:url) %>
@@ -37,6 +38,8 @@
 
   <!-- <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %> -->
   
+  <div class="center hero-unit">
+  
   <h2>
       Or check out Alex's awesome
       <a><%= link_to "Twitter-like", signup_path %></a>
@@ -46,5 +49,5 @@
     <%= link_to "Sign up now!", signup_path, 
                                 class: "btn btn-large btn-primary" %>  
     
-    
+   </div> 
 <% end %>
