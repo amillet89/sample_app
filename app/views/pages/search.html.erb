@@ -42,11 +42,10 @@
   require 'open-uri'
  
   url = @url
-  puts url
+  
   
   if url[0].downcase == 'w'
-  	url[0,0] = "https://"
-  	puts url
+  	url[0,0] = "http://"
   end
   
   doc = Nokogiri::HTML(open(url))
