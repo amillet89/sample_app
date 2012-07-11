@@ -20,7 +20,8 @@ class PagesController < ApplicationController
   end
   
   def search
-  	@url = params[:q]
+  	@url = params[:url]
+  	@selector = params[:selector]
   	render 'pages/search'
   end
   

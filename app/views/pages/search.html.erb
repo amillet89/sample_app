@@ -20,11 +20,13 @@
 
 <% else %>
   <div class="center hero-unit">
-    <h1> Main Title Here: 
+    <h1> My little scraping tool: 
     
-   	    <%= form_tag({:controller => "pages", :action => "search"}, :method => "get") do %>
-  			 <%= label_tag(:q, "Search for:") %>
- 			 <%= text_field_tag(:q) %>
+   	     <%= form_tag({:controller => "pages", :action => "search"}, :method => "get") do %>
+  			 <%= label_tag(:url, "Enter a url:") %>
+ 			 <%= text_field_tag(:url) %>
+ 			 <%= label_tag(:selector, "Enter a selector, for e.g. 'img'") %>
+ 			 <%= text_field_tag(:selector) %>
  			 <%= submit_tag("Search") %>
 		<% end %> 
     
@@ -49,9 +51,9 @@
  
   doc = Nokogiri::HTML(open(@url))
   
-  img = doc.css("img")
+  content = doc.css(@selector)
   %>
   
-  <div> Scraped content here: <%= raw img %>  </div>
+  <div> Scraped content here: <%= raw content %>  </div>
   
 <% end %>
