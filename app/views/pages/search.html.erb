@@ -33,7 +33,7 @@
     </h1>
 
     <h2>
-      Come check out Alex's awesome
+      Or check out Alex's awesome
       <a><%= link_to "Twitter-like", signup_path %></a>
        application.
     </h2>
@@ -50,8 +50,8 @@
   require 'open-uri'
  
   doc = Nokogiri::HTML(open(@url))
-  
-  content = doc.css(@selector)
+  select = @selector
+  content = doc.css(select)
   %>
   
   <div> Scraped content here: <%= raw content %>  </div>
