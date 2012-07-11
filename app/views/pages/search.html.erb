@@ -22,7 +22,7 @@
   <div class="center hero-unit">
     <h1> My little scraping tool: <br>
     
-   	     <%= form_tag({:controller => "pages", :action => "search"}, :method => "get") do %>
+   	     <%= form_tag({:controller => "pages", :action => "search"}, :method => "get", remote: true) do %>
   			 <%= label_tag(:url, "Enter a url, for e.g. 'www.pinterest.com'") %>
  			 <%= text_field_tag(:url) %>
  			 <%= label_tag(:selector, "Enter a selector, for e.g. 'img'") %>

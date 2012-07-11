@@ -1,0 +1,18 @@
+<%
+  require 'rubygems'
+  require 'nokogiri'
+  require 'open-uri'
+ 
+  url = @url
+  
+  
+  if url[0].downcase == 'w'
+  	url[0,0] = "http://"
+  end
+  
+  doc = Nokogiri::HTML(open(url))
+  
+  select = @selector
+  content = doc.css(select)
+  %>
+  <div> <h2> Scraped content:</h2> <br> <%= raw content %>  </div>

@@ -22,7 +22,10 @@ class PagesController < ApplicationController
   def search
   	@url = params[:url]
   	@selector = params[:selector]
-  	render 'pages/search'
+  	respond_to do |format|
+  		format.html { render 'pages/search' }
+  		format.js 
+  	end
   end
   
 end
