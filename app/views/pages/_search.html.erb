@@ -27,7 +27,7 @@
   Anemone.crawl("http://www.evening-dusk-2464.heroku.com") do |anemone|
   	titles = []
   	anemone.on_every_page { |page| titles.push page.doc.at('title').inner_html rescue nil }
-  	anemone.after_crawl {%> <%= titles.compact.sort %> <% }
+  	anemone.after_crawl {%> <%= titles %> <% }
 
 	end  
   %>
