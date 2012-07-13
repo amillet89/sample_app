@@ -13,24 +13,24 @@
   require 'open-uri'
   require 'anemone'
  
-  url = @url
+  url1 = @url
   
-  if url[0].downcase == 'w'
-  	url[0,0] = "http://"
+  if url1[0].downcase == 'w'
+  	url1[0,0] = "http://"
   end
   
-  doc = Nokogiri::HTML(open(url))
+  doc = Nokogiri::HTML(open(url1))
   
   select = @selector
   content = doc.css(select)
   
-  #Anemone.crawl("http://www.evening-dusk-2464.heroku.com") do |anemone|
-  #	titles = []
-  #	anemone.on_every_page { |page| titles.push page.doc.at('title').inner_html rescue nil }
-  #	anemone.after_crawl {
- %>
+  Anemone.crawl(url1) do |anemone|
+   titles = ""
+   anemone.on_every_page { |page| titles += page.doc.at(select).inner_html rescue nil }  
+   
+   end %>
   
- <div> <h3> Scraped content:</h3> <br>  <%= raw content %> </div>
+ <div> <h3> Scraped content:</h3> <br>  <%= raw titles %> </div>
   
   
   
