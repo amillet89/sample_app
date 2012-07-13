@@ -19,20 +19,18 @@
   	url[0,0] = "http://"
   end
   
-  #doc = Nokogiri::HTML(open(url))
+  doc = Nokogiri::HTML(open(url))
   
   select = @selector
-  #content = doc.css(select)
+  content = doc.css(select)
   
-  Anemone.crawl("http://www.evening-dusk-2464.heroku.com") do |anemone|
-  	titles = []
-  	anemone.on_every_page { |page| titles.push page.doc.at('title').inner_html rescue nil }
-  	anemone.after_crawl {%> <%= titles %> <% }
-
-	end  
-  %>
+  #Anemone.crawl("http://www.evening-dusk-2464.heroku.com") do |anemone|
+  #	titles = []
+  #	anemone.on_every_page { |page| titles.push page.doc.at('title').inner_html rescue nil }
+  #	anemone.after_crawl {
+ %>
   
- 
+ <div> <h3> Scraped content:</h3> <br>  <%= raw content %> </div>
   
   
   
