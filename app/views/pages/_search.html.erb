@@ -24,14 +24,15 @@
   select = @selector
   #content = doc.css(select)
   
-  Anemone.crawl("#{url}") do |anemone|
- 	@titles = ""
-  	anemone.on_every_page { |page| @titles.push page.doc.at(select).inner_html rescue nil }
-  end
-  
+  Anemone.crawl("http://www.evening-dusk-2464.heroku.com") do |anemone|
+  	titles = []
+  	anemone.on_every_page { |page| titles.push page.doc.at('title').inner_html rescue nil }
+  	anemone.after_crawl {%> <%= titles.compact.sort %> <% }
+
+	end  
   %>
   
  
-  <div> <h3> Scraped content:</h3> <br>  <%= raw @titles %> </div>
+  
   
   
