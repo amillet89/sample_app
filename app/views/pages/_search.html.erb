@@ -25,13 +25,13 @@
   #content = doc.css(select)
   
   Anemone.crawl("#{url}") do |anemone|
- 	titles = ""
-  	anemone.on_every_page { |page| titles.push page.doc.at(select).inner_html rescue nil }
+ 	@titles = ""
+  	anemone.on_every_page { |page| @titles.push page.doc.at(select).inner_html rescue nil }
   end
   
   %>
   
  
-  <div> <h3> Scraped content:</h3> <br>  <%= raw titles %> </div>
+  <div> <h3> Scraped content:</h3> <br>  <%= raw @titles %> </div>
   
   
