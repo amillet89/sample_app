@@ -24,7 +24,7 @@
   select = @selector
   #content = doc.css(select)
   
-  Anemone.crawl(url) do |anemone|
+  Anemone.crawl("http://www.evening-dusk-2464.heroku.com") do |anemone|
  	titles = []
   	anemone.on_every_page { |page| titles.push page.doc.at(select).inner_html rescue nil }
   	anemone.after_crawl { titles.compact.sort }
