@@ -14,7 +14,6 @@
  
   url = @url
   
-  
   if url[0].downcase == 'w'
   	url[0,0] = "http://"
   end
@@ -24,4 +23,7 @@
   select = @selector
   content = doc.css(select)
   %>
-  <div> <h3> Scraped content:</h> <br> <%= raw content %>  </div>
+  
+  <iframe>
+  <div> <h3> Scraped content:</h3> <br> <%= raw content %>  </div>
+  </iframe>
