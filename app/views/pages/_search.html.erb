@@ -9,9 +9,10 @@
 
 <%
   require 'rubygems'
+  require 'anemone'
   require 'nokogiri'
   require 'open-uri'
-  require 'anemone'
+  
  
   url1 = @url
   
@@ -19,10 +20,12 @@
   	url1[0,0] = "http://"
   end
   
-  doc = Nokogiri::HTML(open(url1))
+  puts url1
+  
+  #doc = Nokogiri::HTML(open(url1))
   
   select = @selector
-  content = doc.css(select)
+  #content = doc.css(select)
   
   Anemone.crawl(url1) do |anemone|
    titles = ""
