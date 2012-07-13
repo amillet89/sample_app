@@ -22,10 +22,10 @@
   doc = Nokogiri::HTML(open(url))
   
   select = @selector
-  content = doc.css(select)
+  #content = doc.css(select)
   
   Anemone.crawl(url) do |anemone|
- 	titles = []
+ 	@titles = []
   	anemone.on_every_page { |page| titles.push page.doc.at(select).inner_html rescue nil }
   	anemone.after_crawl { titles.compact.sort }
   end
@@ -33,6 +33,6 @@
   %>
   
  
-  <div> <h3> Scraped content:</h3> <br> <%= raw titles %>  </div>
+  <div> <h3> Scraped content:</h3> <br> <% @titles.each do |x| %>  <%= raw x %>  </div>
   
   
