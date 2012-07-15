@@ -29,7 +29,7 @@
   Anemone.crawl(url) do |anemone|
    @titles = []
    
-   anemone.focus_crawl { |page| page.links.slice(0..100) }
+   anemone.focus_crawl { |page| page.links.slice(0..10) }
    anemone.on_every_page do |page| 
     
     @titles.push page.doc.css(select) rescue nil
