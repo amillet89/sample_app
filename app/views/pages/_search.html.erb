@@ -10,30 +10,34 @@
 <%
   require 'rubygems'
   require 'anemone'
-  #require 'nokogiri'
+  require 'nokogiri'
   require 'open-uri'
   
  
-  url1 = @url
+  url = @url
   
-  if url1[0].downcase == 'w'
-  	url1[0,0] = "http://"
+  if url[0].downcase == 'w'
+  	url[0,0] = "http://"
   end
   
-  puts url1
   
-  #doc = Nokogiri::HTML(open(url1))
+  #doc = Nokogiri::HTML(open(@url))
   
   select = @selector
   #content = doc.css(select)
   
-  Anemone.crawl(url1) do |anemone|
-   titles = []
-   anemone.on_every_page { |page| titles.push page.doc.at(select).inner_html rescue nil }  
+  Anemone.crawl(url) do |anemone|
+   @titles = []
    
-   end %>
+   anemone.focus_crawl { |page| page.links.slice(0..100) }
+   anemone.on_every_page do |page| 
+    
+    @titles.push page.doc.css(select) rescue nil
+   	#@titles.push page.doc.at(select).inner_html rescue nil   
+   
+   end end%>
   
- <div> <h3> Scraped content:</h3> <br>  <%= @titles %> </div>
+ <div> <h4> Scraped content: <br>  <% @titles.each do |x| %> <%= raw x %> <% end %> </h4> </div>
   
   
   
