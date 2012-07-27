@@ -1,0 +1,50 @@
+<% if signed_in? %>
+  <div class="row">
+    <aside class="span4">
+      <section>
+        <%= render 'shared/user_info' %>
+      </section>
+	  <section>
+	        <%= render 'shared/stats' %>
+	  </section>
+      <section>
+        <%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+
+	<div class="span8">
+	      <h3>Micropost Feed</h3>
+	      <%= render 'shared/feed' %>
+	</div>
+  </div>  
+
+<% else %>
+  <div class="center hero-unit">
+    <h1> My little scraping tool: <br>
+    
+   	     <%= form_tag({:controller => "pages", :action => "search"}, :method => "get", remote: true) do %>
+  			 <%= label_tag(:url, "Enter a url, for e.g. 'www.pinterest.com'") %>
+ 			 <%= text_field_tag(:url) %>
+ 			 <%= label_tag(:selector, "Enter a selector, for e.g. 'img'") %>
+ 			 <%= text_field_tag(:selector) %>
+ 			 <%= submit_tag("Search") %>
+		<% end %> 
+    
+    </h1>
+
+      </div>
+
+  <!-- <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %> -->
+  
+
+  
+  <h2> <br><br><br>
+      Or check out Alex's awesome
+      <a><%= link_to "Twitter-like", signup_path %></a>
+       application.
+    </h2>
+
+    <%= link_to "Sign up now!", signup_path, 
+                                class: "center btn btn-large btn-primary" %>
+
+  
