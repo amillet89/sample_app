@@ -28,4 +28,8 @@ class PagesController < ApplicationController
   	end
   end
   
+  def preview
+  
+  end
+  
 end
