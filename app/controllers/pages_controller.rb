@@ -30,9 +30,7 @@ class PagesController < ApplicationController
   
   def preview
   	@url2 = params[:url2]
-  	respond_to do |format|
-  		format.html { render 'pages/preview' } 
-  	end
+  	render 'pages/preview' 
 
   end
   
