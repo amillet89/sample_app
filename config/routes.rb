@@ -18,6 +18,7 @@ SampleApp::Application.routes.draw do
   match '/about',   :to => 'pages#about'
   match '/help',    :to => 'pages#help'
   match '/search',  :to => 'pages#search'
+  match '/preview', :to => 'pages#preview'
   
 
   
