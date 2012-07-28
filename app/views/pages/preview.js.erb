@@ -1,1 +1,4 @@
-$(".ajax").html("<%= escape_javascript(render('pages/preview')) %>")
+<%= javascript_include_tag 'linkPreview' %>
+$(document).ready(function(){
+				$("#preview").linkPreview();
+			});
