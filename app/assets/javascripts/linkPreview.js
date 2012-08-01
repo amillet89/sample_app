@@ -1,7 +1,8 @@
 (function ($) {
 	$.fn.linkPreview = function(){
 	
-	$("h1").focus(function() {
+	
+	$(document).ready(function(){
 	
 		$(this).css({ 'color' : 'red' });
 		
