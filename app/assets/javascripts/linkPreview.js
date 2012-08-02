@@ -2,11 +2,11 @@
 	$.fn.linkPreview = function(){
 	
 	
-	$(document).ready(function(){
+	$("h1").hover(function(){
 	
-		$(this).css({ 'color' : 'red' });
+		$(this).append($("<span>***</span>"));
 		
-	})
+	});
 		
 	
 	}

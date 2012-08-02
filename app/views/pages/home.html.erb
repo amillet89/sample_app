@@ -20,9 +20,13 @@
 
 <% else %>
 
-	  <div class="center hero-unit">
+   <div id="content-preview" class="center hero-unit">
    
-   <h1> A content preview tool: <br><br>
+   <h1> A content preview tool: <br><br>  </h1>
+   
+   <script>
+   		$("h1").linkPreview();
+   </script>
    	    
    	     <%= form_tag({:controller => "pages", :action => "preview"}, :method => "get", :id => "preview", remote: true) do %>
   			 <%= label_tag(:url2, "Enter a url of content you would like to preview") %>
@@ -30,10 +34,10 @@
  			 <%= submit_tag("Preview") %>
 		<% end %> 
     
-    </h1>
-
+   <!-- the html for the content-preview -->
+   <%= render 'shared/link_preview' %>
     
-  </div>
+  </div> <!-- end content-preview -->
 
 
 
@@ -49,6 +53,8 @@
 		<% end %> 
     
     </h1>
+    
+    <div id="loading"> </div>
 
     
   </div>

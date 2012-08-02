@@ -29,13 +29,15 @@
   Anemone.crawl(url) do |anemone|
    @titles = []
    
-   anemone.focus_crawl { |page| page.links.slice(0..10) }
+   anemone.focus_crawl { |page| page.links.slice(0..5) }
    anemone.on_every_page do |page| 
     
     @titles.push page.doc.css(select) rescue nil
    	#@titles.push page.doc.at(select).inner_html rescue nil   
    
-   end end%>
+   end end
+   
+   @titles = @titles.uniq! %>
   
  <div> <h4> Scraped content: <br>  <% @titles.each do |x| %> <%= raw x %> <% end %> </h4> </div>
   
