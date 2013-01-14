@@ -1,6 +1,6 @@
 
    	     <%= form_tag({:controller => "pages", :action => "search"}, :method => "get", remote: true) do %>
-  			 <%= label_tag(:url, "Enter a url, for e.g. 'www.pinterest.com'") %>
+  			 <%= label_tag(:url, "Enter a URL, for e.g. 'www.pinterest.com'") %>
  			 <%= text_field_tag(:url) %>
  			 <%= label_tag(:selector, "Enter a selector, for e.g. 'img'") %>
  			 <%= text_field_tag(:selector) %>
