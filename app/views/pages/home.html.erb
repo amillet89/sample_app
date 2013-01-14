@@ -29,7 +29,7 @@
    </script>
    	    
    	     <%= form_tag({:controller => "pages", :action => "preview"}, :method => "get", :id => "preview", remote: true) do %>
-  			 <%= label_tag(:url2, "Enter a url of content you would like to preview") %>
+  			 <%= label_tag(:url2, "Enter a URL of content you would like to preview") %>
  			 <%= text_field_tag(:url2) %>
  			 <%= submit_tag("Preview") %>
 		<% end %> 
