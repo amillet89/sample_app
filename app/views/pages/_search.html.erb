@@ -21,25 +21,30 @@
   end
   
   
-  #doc = Nokogiri::HTML(open(@url))
+  doc = Nokogiri::HTML(open(@url))
   
   select = @selector
-  #content = doc.css(select)
+  content = doc.css(select)
   
   Anemone.crawl(url) do |anemone|
    @titles = []
+   @titles2 = []
    
-   anemone.focus_crawl { |page| page.links.slice(0..5) }
+   #anemone.focus_crawl { |page| page.links.slice(0..5) }
    anemone.on_every_page do |page| 
     
     @titles.push page.doc.css(select) rescue nil
-   	#@titles.push page.doc.at(select).inner_html rescue nil   
+   	@titles2.push page.doc.at(select).inner_html rescue nil   
    
    end end
    
-   @titles = @titles.uniq! %>
+   @titles = @titles.uniq!
+   @titles2 = @titles2.uniq!
+    %>
   
- <div> <h4> Scraped content: <br>  <% @titles.each do |x| %> <%= raw x %> <% end %> </h4> </div>
+ <div> <h4> Scraped content 1: <br>  <% @titles.each do |x| %> <%= raw x %> <% end %> </h4> </div>
+
+ <div> <h4> Scraped content 1: <br>  <% @titles2.each do |y| %> <%= raw y %> <% end %> </h4> </div>
   
   
   
