@@ -22,6 +22,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'anything_slider_rails'
 
 group :test, :development do
   gem 'rspec-rails', '2.10.0'

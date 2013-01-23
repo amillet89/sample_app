@@ -6,4 +6,5 @@
  * scope.
  *= require_self
  *= require_tree . 
+ *= require anythingslider/anythingslider
 */
