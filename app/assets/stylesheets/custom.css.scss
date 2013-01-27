@@ -13,7 +13,7 @@ $grayMediumLight: #eaeaea;
 /* universal */
 
 html {
-  overflow-y: scroll;
+  /*overflow-y: scroll; */
 }
 
 body {
@@ -21,11 +21,11 @@ body {
 }
 
 section {
-  overflow: auto;
+  /*overflow: auto;*/
 }
 
 textarea {
-  resize: vertical;
+ /* resize: vertical;*/
 }
 
 .center {
@@ -250,14 +250,6 @@ aside {
 
 .span8 {
   width: 940px;
-  li {
-    height:100px;
-    float: left; 
-  }
+  
 }
 
-ul#slider, ul#slider li {
-    width: 300px;
-    height: 200px;
-    list-style: none;
-}
