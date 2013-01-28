@@ -129,7 +129,7 @@
 	margin: -20px 0 0 0; /* half height of image */
 	text-align: center;
 	outline: 0;
-	background: url(../images/arrows-minimalist.png) no-repeat;
+	background: url(/assets/images/arrows-minimalist.png) no-repeat;
 }
 
 /* back arrow */

@@ -8791,11 +8791,6 @@ aside textarea {
   width: 940px;
   height: 650px;
 }
-
-/* line 267, ../../app/assets/stylesheets/custom.css.scss */
-li {
-  width: 940px;
-}
 /*
 	AnythingSlider v1.8+ Construction theme
 	By Rob Garrison
@@ -9816,7 +9811,7 @@ IE8 AND OLDER STYLING
 	margin: -20px 0 0 0; /* half height of image */
 	text-align: center;
 	outline: 0;
-	background: url(../images/arrows-minimalist.png) no-repeat;
+	background: url(/assets/images/arrows-minimalist.png) no-repeat;
 }
 
 /* back arrow */
