@@ -131,12 +131,12 @@
 }
 
 /* back arrow */
-.anythingSlider-default .back { left: 0; }
+.anythingSlider-default .back { left: -165px; }
 .anythingSlider-default .back a { background-position: left top; }
 .anythingSlider-default .back a:hover,
 .anythingSlider-default .back a.hover { background-position: left -140px; }
 /* forward arrow */
-.anythingSlider-default .forward { right: 0; }
+.anythingSlider-default .forward { right: -165px; }
 .anythingSlider-default .forward a { background-position: right top; }
 .anythingSlider-default .forward a:hover,
 .anythingSlider-default .forward a.hover { background-position: right -140px; }

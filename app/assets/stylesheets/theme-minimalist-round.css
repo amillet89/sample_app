@@ -7,7 +7,7 @@
  *****************************/
 /* change the ID & dimensions to match your slider */
 #slider {
-	width: 700px;
+	width: 940px;
 	height: 390px;
 	list-style: none;
 	/* Prevent FOUC (see FAQ page) and keep things readable if javascript is disabled */
@@ -129,16 +129,16 @@
 	margin: -20px 0 0 0; /* half height of image */
 	text-align: center;
 	outline: 0;
-	background: url(/assets/images/arrows-minimalist.png) no-repeat;
+	background-image: url("/images/arrows-minimalist.png") no-repeat;
 }
 
 /* back arrow */
-.anythingSlider-minimalist-round .back { left: 0; }
+.anythingSlider-minimalist-round .back { left: -165px; }
 .anythingSlider-minimalist-round .back a { background-position: left bottom; }
 .anythingSlider-minimalist-round .back a:hover,
 .anythingSlider-minimalist-round .back a.hover { background-position: left top; }
 /* forward arrow */
-.anythingSlider-minimalist-round .forward { right: 0; }
+.anythingSlider-minimalist-round .forward { right: -165px; }
 .anythingSlider-minimalist-round .forward a { background-position: right bottom; }
 .anythingSlider-minimalist-round .forward a:hover,
 .anythingSlider-minimalist-round .forward a.hover { background-position: right top; }
