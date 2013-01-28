@@ -7,8 +7,8 @@
  *****************************/
 /* change the ID & dimensions to match your slider */
 #slider {
-	width: 700px;
-	height: 390px;
+	width: 940px;
+	height: 630px;
 	list-style: none;
 	/* Prevent FOUC (see FAQ page) and keep things readable if javascript is disabled */
 	overflow-y: auto;
@@ -29,8 +29,8 @@
 }
 /* slider window - top & bottom borders, default state */
 .anythingSlider-minimalist-square .anythingWindow {
-	border-top: 3px solid #333;
-	border-bottom: 3px solid #333;
+	/*border-top: 3px solid #333;*/
+	/*border-bottom: 3px solid #333;*/
 }
 /* Navigation buttons + start/stop button, default state */
 .anythingSlider-minimalist-square .anythingControls a {
@@ -130,12 +130,12 @@
 }
 
 /* back arrow */
-.anythingSlider-minimalist-square .back { left: 0; }
+.anythingSlider-minimalist-square .back { left: -165px; }
 .anythingSlider-minimalist-square .back a { background-position: left bottom; }
 .anythingSlider-minimalist-square .back a:hover,
 .anythingSlider-minimalist-square .back a.hover { background-position: left top; }
 /* forward arrow */
-.anythingSlider-minimalist-square .forward { right: 0; }
+.anythingSlider-minimalist-square .forward { right: -165px; }
 .anythingSlider-minimalist-square .forward a { background-position: right bottom; }
 .anythingSlider-minimalist-square .forward a:hover,
 .anythingSlider-minimalist-square .forward a.hover { background-position: right top; }
