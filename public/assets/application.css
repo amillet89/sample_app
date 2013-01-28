@@ -3834,7 +3834,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 /* change the ID & dimensions to match your slider */
 #slider {
 	width: 940px;
-	height: 390px;
+	height: 600px;
 	list-style: none;
 	/* Prevent FOUC (see FAQ page) and keep things readable if javascript is disabled */
 	overflow-y: auto;
@@ -8777,6 +8777,23 @@ aside textarea {
 
 /* line 251, ../../app/assets/stylesheets/custom.css.scss */
 .span8 {
+  width: 940px;
+}
+
+/* line 256, ../../app/assets/stylesheets/custom.css.scss */
+#slider {
+  vertical-align: middle;
+  width: 940px;
+}
+
+/* line 262, ../../app/assets/stylesheets/custom.css.scss */
+#content-slider {
+  width: 940px;
+  height: 650px;
+}
+
+/* line 267, ../../app/assets/stylesheets/custom.css.scss */
+li {
   width: 940px;
 }
 /*

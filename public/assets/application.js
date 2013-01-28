@@ -10004,7 +10004,7 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
 ;(function($, win, doc) {
 	"use strict";
 	$.anythingSlider = function(el, options) {
-		alert("Made it inside anything slider");
+		
 		var base = this, o, t;
 
 		// Wraps the ul in the necessary divs and then gives Access to jQuery element

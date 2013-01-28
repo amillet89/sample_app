@@ -11,7 +11,7 @@
 /* change the ID & dimensions to match your slider */
 #slider {
 	width: 940px;
-	height: 390px;
+	height: 600px;
 	list-style: none;
 	/* Prevent FOUC (see FAQ page) and keep things readable if javascript is disabled */
 	overflow-y: auto;

@@ -25,14 +25,82 @@
 
 <% else %>
 
+  <div id="content-slider">
+      <ul id="slider">
+      <!--<li>  
+            
+            <img src="http://lorempixel.com/300/200/animals/1" alt="" />
+            <img src="http://lorempixel.com/300/200/animals/2" alt="" />
+            <img src="http://lorempixel.com/300/200/animals/3" alt="" />
+            <img src="http://lorempixel.com/300/200/animals/4" alt="" />
+            <img src="http://lorempixel.com/300/200/animals/5" alt="" />
+            <img src="http://lorempixel.com/300/200/animals/6" alt="" />
+            <img src="http://lorempixel.com/300/200/animals/7" alt="" />
+            <img src="http://lorempixel.com/300/200/animals/8" alt="" />
+            <img src="http://lorempixel.com/300/200/animals/9" alt="" />
+
+    </li>-->
+      <li><img src="http://lorempixel.com/940/630/animals" alt="" /> </li>
+       <li><img src="http://lorempixel.com/940/630/sports" alt="" /> </li>
+        <li><img src="http://lorempixel.com/940/630/nightlife" alt="" /> </li>
+         <li><img src="http://lorempixel.com/940/630/nature" alt="" /> </li>
+          <li><img src="http://lorempixel.com/940/630/people" alt="" /> </li>
+          <li><img src="http://lorempixel.com/940/630/animals/2" alt="" /> </li>
+       <li><img src="http://lorempixel.com/940/630/sports/2" alt="" /> </li>
+        <li><img src="http://lorempixel.com/940/630/nightlife/2" alt="" /> </li>
+         <li><img src="http://lorempixel.com/940/630/nature/2" alt="" /> </li>
+          <li><img src="http://lorempixel.com/940/630/people/2" alt="" /> </li>
+          <li><img src="http://lorempixel.com/940/630/animals/3" alt="" /> </li>
+       <li><img src="http://lorempixel.com/940/630/sports/3" alt="" /> </li>
+        <li><img src="http://lorempixel.com/940/630/nightlife/3" alt="" /> </li>
+         <li><img src="http://lorempixel.com/940/630/nature/3" alt="" /> </li>
+          <li><img src="http://lorempixel.com/940/630/people/3" alt="" /> </li>
+            <li><img src="http://lorempixel.com/940/630/animals/4" alt="" /> </li>
+       <li><img src="http://lorempixel.com/940/630/sports/4" alt="" /> </li>
+        <li><img src="http://lorempixel.com/940/630/nightlife/4" alt="" /> </li>
+         <li><img src="http://lorempixel.com/940/630/nature/4" alt="" /> </li>
+          <li><img src="http://lorempixel.com/940/630/people/4" alt="" /> </li>
+            <li><img src="http://lorempixel.com/940/630/animals/5" alt="" /> </li>
+       <li><img src="http://lorempixel.com/940/630/sports/5" alt="" /> </li>
+        <li><img src="http://lorempixel.com/940/630/nightlife/5" alt="" /> </li>
+         <li><img src="http://lorempixel.com/940/630/nature/5" alt="" /> </li>
+          <li><img src="http://lorempixel.com/940/630/people/5" alt="" /> </li>
+            <li><img src="http://lorempixel.com/940/630/animals/6" alt="" /> </li>
+       <li><img src="http://lorempixel.com/940/630/sports/6" alt="" /> </li>
+        <li><img src="http://lorempixel.com/940/630/nightlife/6" alt="" /> </li>
+         <li><img src="http://lorempixel.com/940/630/nature/6" alt="" /> </li>
+          <li><img src="http://lorempixel.com/940/630/people/6" alt="" /> </li>
+
+           <li><img src="http://lorempixel.com/940/630/animals/7" alt="" /> </li>
+       <li><img src="http://lorempixel.com/940/630/sports/7" alt="" /> </li>
+        <li><img src="http://lorempixel.com/940/630/nightlife/7" alt="" /> </li>
+         <li><img src="http://lorempixel.com/940/630/nature/7" alt="" /> </li>
+          <li><img src="http://lorempixel.com/940/630/people/7" alt="" /> </li>
+
+           <li><img src="http://lorempixel.com/940/630/animals/8" alt="" /> </li>
+       <li><img src="http://lorempixel.com/940/630/sports/8" alt="" /> </li>
+        <li><img src="http://lorempixel.com/940/630/nightlife/8" alt="" /> </li>
+         <li><img src="http://lorempixel.com/940/630/nature/8" alt="" /> </li>
+          <li><img src="http://lorempixel.com/940/630/people/8" alt="" /> </li>
+
+           <li><img src="http://lorempixel.com/940/630/animals/9" alt="" /> </li>
+       <li><img src="http://lorempixel.com/940/630/sports/9" alt="" /> </li>
+        <li><img src="http://lorempixel.com/940/630/nightlife/9" alt="" /> </li>
+  
+          <li><img src="http://lorempixel.com/940/630/people/9" alt="" /> </li>
+
+    </ul>
+  </div>
+
  <script>
 
-        $('#slider').anythingSlider({
-
-    // *********** Appearance ***********
+ var slider = {
+      init: function() {
+          $('#slider').anythingSlider({
+            // *********** Appearance ***********
     // Theme name; choose from: minimalist-round, minimalist-square,
     // metallic, construction, cs-portfolio
-    
+    theme:'cs-portfolio',
     // Set mode to "horizontal", "vertical" or "fade"
     // (only first letter needed); replaces vertical option
     mode: 'horizontal',
@@ -191,83 +259,14 @@
     // by video extension
     isVideoPlaying: function(base) {
         return false;
-    }
+          }});
+     }
+}
 
-});
+$(window).load( slider.init )
+
    </script>
   
-  <div id="content-slider">
-      <ul id="slider">
-      <li><img src="http://placekitten.com/300/200" alt="" /></li>
-      <li><img src="http://placehold.it/300x200" alt="" /></li>
-      <li><img src="http://placebear.com/300/200" alt="" /></li>
-     <li><img src="http://dummyimage.com/300x200/000/fff.jpg" alt="" /></li>
-     <li><img src="http://placedog.com/300/200" alt="" /></li>
-    </ul>
-  </div>
-
-
-
-
-
-
-
-
-   <div id="content-preview" class="center hero-unit">
-   
-   <h1> A content preview tool: <br><br>  </h1>
-   
-   <!--
-   <script>
-   		$("h1").linkPreview();
-   </script>
-   	-->    
-   	     <%= form_tag({:controller => "pages", :action => "preview"}, :method => "get", :id => "preview", remote: true) do %>
-  			 <%= label_tag(:url2, "Enter a URL of content you would like to preview") %>
- 			 <%= text_field_tag(:url2) %>
- 			 <%= submit_tag("Preview") %>
-		<% end %> 
-    
-   <!-- the html for the content-preview -->
-   <%= render 'shared/link_preview' %>
-    
-  </div> <!-- end content-preview -->
-
-
-
-  <div class="center hero-unit">
-   <h1> My little scraping tool: <br><br>
-    
-   	     <%= form_tag({:controller => "pages", :action => "search"}, :method => "get", :class => "ajax", remote: true) do %>
-  			 <%= label_tag(:url, "Enter a url, for e.g. 'www.pinterest.com'") %>
- 			 <%= text_field_tag(:url) %>
- 			 <%= label_tag(:selector, "Enter a selector, for e.g. 'img'") %>
- 			 <%= text_field_tag(:selector) %>
- 			 <%= submit_tag("Search") %>
-		<% end %> 
-    
-    </h1>
-    
-    <div id="loading"> </div>
-
-    
-  </div>
-  
-  
-  
-
-  <!-- <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %> -->
-  
-  <div class="center hero-unit">
-  
-  <h2> <br>
-      Or check out Alex's awesome
-      <a><%= link_to "Twitter-like", signup_path %></a>
-       application.
-  </h2>
-
-    <%= link_to "Sign up now!", signup_path, 
-                                class: "center btn btn-large btn-primary" %>  
     
    </div> 
 <% end %>
