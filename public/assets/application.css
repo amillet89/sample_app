@@ -8667,21 +8667,22 @@ stats strong {
 
 /* line 152, ../../app/assets/stylesheets/custom.css.scss */
 aside section {
-  padding: 10px 0;
-  border-top: 1px solid #eeeeee;
+  float: left;
+  /*padding: 10px 0;
+  border-top: 1px solid $grayLighter;*/
 }
-/* line 155, ../../app/assets/stylesheets/custom.css.scss */
+/* line 156, ../../app/assets/stylesheets/custom.css.scss */
 aside section:first-child {
   border: 0;
   padding-top: 0;
 }
-/* line 159, ../../app/assets/stylesheets/custom.css.scss */
+/* line 160, ../../app/assets/stylesheets/custom.css.scss */
 aside section span {
   display: block;
   margin-bottom: 3px;
   line-height: 1;
 }
-/* line 164, ../../app/assets/stylesheets/custom.css.scss */
+/* line 165, ../../app/assets/stylesheets/custom.css.scss */
 aside section h1 {
   font-size: 1.6em;
   text-align: left;
@@ -8689,107 +8690,142 @@ aside section h1 {
   margin-bottom: 3px;
 }
 
-/* line 173, ../../app/assets/stylesheets/custom.css.scss */
+/* line 174, ../../app/assets/stylesheets/custom.css.scss */
 .gravatar {
   float: left;
   margin-right: 10px;
 }
 
 /* forms */
-/* line 180, ../../app/assets/stylesheets/custom.css.scss */
+/* line 181, ../../app/assets/stylesheets/custom.css.scss */
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbbbbb;
   width: 100%;
   padding: 10px;
   height: auto;
-  margin-bottom: 15px;
+  /*margin-bottom: 15px;*/
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 189, ../../app/assets/stylesheets/custom.css.scss */
+/* line 190, ../../app/assets/stylesheets/custom.css.scss */
 #error_explanation {
   color: #f00;
 }
-/* line 191, ../../app/assets/stylesheets/custom.css.scss */
+/* line 192, ../../app/assets/stylesheets/custom.css.scss */
 #error_explanation ul {
   list-style: none;
   margin: 0 0 18px 0;
 }
 
 /* users index */
-/* line 204, ../../app/assets/stylesheets/custom.css.scss */
+/* line 205, ../../app/assets/stylesheets/custom.css.scss */
 .users {
   list-style: none;
   margin: 0;
 }
-/* line 207, ../../app/assets/stylesheets/custom.css.scss */
+/* line 208, ../../app/assets/stylesheets/custom.css.scss */
 .users li {
   overflow: auto;
   padding: 10px 0;
   /* border-top: 1px solid $grayLighter; */
 }
-/* line 211, ../../app/assets/stylesheets/custom.css.scss */
+/* line 212, ../../app/assets/stylesheets/custom.css.scss */
 .users li:last-child {
   /* border-bottom: 1px solid $grayLighter; */
 }
 
 /* microposts */
-/* line 219, ../../app/assets/stylesheets/custom.css.scss */
+/* line 220, ../../app/assets/stylesheets/custom.css.scss */
 .microposts {
   list-style: none;
   margin: 10px 0 0 0;
 }
-/* line 223, ../../app/assets/stylesheets/custom.css.scss */
+/* line 224, ../../app/assets/stylesheets/custom.css.scss */
 .microposts li {
   padding: 10px 0;
   width: 940px;
+  height: 500px;
   /*border-top: 1px solid #e8e8e8; */
 }
 
-/* line 230, ../../app/assets/stylesheets/custom.css.scss */
+/* line 232, ../../app/assets/stylesheets/custom.css.scss */
 .content {
   display: block;
 }
 
-/* line 233, ../../app/assets/stylesheets/custom.css.scss */
+/* line 235, ../../app/assets/stylesheets/custom.css.scss */
 .timestamp {
   color: #999999;
 }
 
-/* line 236, ../../app/assets/stylesheets/custom.css.scss */
+/* line 238, ../../app/assets/stylesheets/custom.css.scss */
 .gravatar {
   float: left;
   margin-right: 10px;
 }
 
-/* line 241, ../../app/assets/stylesheets/custom.css.scss */
+/* line 243, ../../app/assets/stylesheets/custom.css.scss */
 aside textarea {
-  height: 100px;
+  /*height: 100px;*/
   margin-bottom: 5px;
 }
 
-/* line 247, ../../app/assets/stylesheets/custom.css.scss */
+/* line 249, ../../app/assets/stylesheets/custom.css.scss */
 .span4 {
-  width: 940px;
+  /*width: 940px;*/
+  width: 100%;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eaeaea;
 }
 
-/* line 251, ../../app/assets/stylesheets/custom.css.scss */
+/* line 257, ../../app/assets/stylesheets/custom.css.scss */
 .span8 {
   width: 940px;
+  height: 550px;
 }
 
-/* line 256, ../../app/assets/stylesheets/custom.css.scss */
+/* line 263, ../../app/assets/stylesheets/custom.css.scss */
 #slider {
   vertical-align: middle;
   width: 940px;
 }
 
-/* line 262, ../../app/assets/stylesheets/custom.css.scss */
+/* line 269, ../../app/assets/stylesheets/custom.css.scss */
 #content-slider {
   width: 940px;
   height: 650px;
+}
+
+/* line 274, ../../app/assets/stylesheets/custom.css.scss */
+.sect_prof {
+  width: 180px;
+}
+
+/* line 275, ../../app/assets/stylesheets/custom.css.scss */
+.sect_stats {
+  width: 155px;
+}
+
+/* line 276, ../../app/assets/stylesheets/custom.css.scss */
+.sect_form {
+  width: 60%;
+}
+/* line 278, ../../app/assets/stylesheets/custom.css.scss */
+.sect_form textarea {
+  margin-right: 5px;
+  width: 84%;
+  height: 56px;
+}
+/* line 283, ../../app/assets/stylesheets/custom.css.scss */
+.sect_form input {
+  margin-bottom: 0px;
+}
+/* line 287, ../../app/assets/stylesheets/custom.css.scss */
+.sect_form form {
+  margin-bottom: 0px;
 }
 /*
 	AnythingSlider v1.8+ Construction theme
