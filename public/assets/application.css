@@ -4120,6 +4120,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	-moz-transition-duration: 0;
 	-webkit-transition-duration: 0;
 }
+.link-preview img {
+  max-height: 120px;
+  max-width: 100%;
+}
+.link-preview h4 {
+  margin-top: 0;
+}
+.link-preview .alert {
+  margin-bottom: 0;
+}
 /*
  * Bootstrap 2.0.0
  *
@@ -10257,7 +10267,7 @@ COMMON SLIDER STYLING
 	margin: 0;
 }
 
-::-webkit-scrollbar { 
+.anythingSlider::-webkit-scrollbar { 
     display: none; 
 }
 
