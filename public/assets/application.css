@@ -10267,7 +10267,7 @@ COMMON SLIDER STYLING
 	margin: 0;
 }
 
-.anythingSlider::-webkit-scrollbar { 
+::-webkit-scrollbar { 
     display: none; 
 }
 
