@@ -220,7 +220,7 @@
 	margin: 0;
 }
 
-::-webkit-scrollbar { 
+.anythingSlider::-webkit-scrollbar { 
     display: none; 
 }
 
