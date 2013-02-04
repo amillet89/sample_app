@@ -14,7 +14,7 @@
 	height: 600px;
 	list-style: none;
 	/* Prevent FOUC (see FAQ page) and keep things readable if javascript is disabled */
-	overflow-y: auto;
+	overflow-y: scroll;
 	overflow-x: hidden;
 }
 
@@ -158,7 +158,9 @@
 
 /* navigationSize window */
 .anythingSlider-default .anythingControls .anythingNavWindow {
-	overflow: hidden;
+	/*overflow: hidden;*/
+	overflow-x:hidden;
+	overflow-y:scroll;
 	float: left;
 }
 
@@ -213,7 +215,9 @@
 }
 /* anythingSlider viewport window */
 .anythingSlider .anythingWindow {
-	overflow: hidden;
+	/*overflow: hidden;*/
+	overflow-x:hidden;
+	overflow-y:scroll;
 	position: relative;
 	width: 100%;
 	height: 100%;
@@ -244,7 +248,10 @@
 .anythingSlider .panel {
 	background: transparent;
 	display: block;
-	overflow: hidden;
+	/*overflow: hidden;*/
+	/* HELLO ALEX!! */
+	overflow-x:hidden;
+	overflow-y:scroll;
 	float: left;
 	padding: 0;
 	margin: 0;
@@ -261,6 +268,7 @@
 	left: 0;
 	z-index: 0;
 }
+
 /* fade mode active page - visible & on top */
 .anythingSlider .fade .activePage {
 	z-index: 1;

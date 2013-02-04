@@ -3837,7 +3837,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	height: 600px;
 	list-style: none;
 	/* Prevent FOUC (see FAQ page) and keep things readable if javascript is disabled */
-	overflow-y: auto;
+	overflow-y: scroll;
 	overflow-x: hidden;
 }
 
@@ -3981,7 +3981,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 /* navigationSize window */
 .anythingSlider-default .anythingControls .anythingNavWindow {
-	overflow: hidden;
+	/*overflow: hidden;*/
+	overflow-x:hidden;
+	overflow-y:scroll;
 	float: left;
 }
 
@@ -4036,7 +4038,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 /* anythingSlider viewport window */
 .anythingSlider .anythingWindow {
-	overflow: hidden;
+	/*overflow: hidden;*/
+	overflow-x:hidden;
+	overflow-y:scroll;
 	position: relative;
 	width: 100%;
 	height: 100%;
@@ -4067,7 +4071,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .anythingSlider .panel {
 	background: transparent;
 	display: block;
-	overflow: hidden;
+	/*overflow: hidden;*/
+	/* HELLO ALEX!! */
+	overflow-x:hidden;
+	overflow-y:scroll;
 	float: left;
 	padding: 0;
 	margin: 0;
@@ -4084,6 +4091,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	left: 0;
 	z-index: 0;
 }
+
 /* fade mode active page - visible & on top */
 .anythingSlider .fade .activePage {
 	z-index: 1;
@@ -8617,7 +8625,7 @@ footer ul li {
 }
 
 /* miscellaneous */
-/* line 112, ../../app/assets/stylesheets/custom.css.scss */
+/* line 113, ../../app/assets/stylesheets/custom.css.scss */
 .debug_dump {
   clear: both;
   float: left;
@@ -8629,60 +8637,60 @@ footer ul li {
 }
 
 /* sidebar */
-/* line 122, ../../app/assets/stylesheets/custom.css.scss */
+/* line 123, ../../app/assets/stylesheets/custom.css.scss */
 stats {
   overflow: auto;
 }
-/* line 124, ../../app/assets/stylesheets/custom.css.scss */
+/* line 125, ../../app/assets/stylesheets/custom.css.scss */
 stats a {
   float: left;
   padding: 0 10px;
   border-left: 1px solid #eeeeee;
   color: gray;
 }
-/* line 129, ../../app/assets/stylesheets/custom.css.scss */
+/* line 130, ../../app/assets/stylesheets/custom.css.scss */
 stats a:first-child {
   padding-left: 0;
   border: 0;
 }
-/* line 133, ../../app/assets/stylesheets/custom.css.scss */
+/* line 134, ../../app/assets/stylesheets/custom.css.scss */
 stats a:hover {
   text-decoration: none;
   color: #049cdb;
 }
-/* line 138, ../../app/assets/stylesheets/custom.css.scss */
+/* line 139, ../../app/assets/stylesheets/custom.css.scss */
 stats strong {
   display: block;
 }
 
-/* line 143, ../../app/assets/stylesheets/custom.css.scss */
+/* line 144, ../../app/assets/stylesheets/custom.css.scss */
 .user_avatars {
   overflow: auto;
   margin-top: 10px;
 }
-/* line 146, ../../app/assets/stylesheets/custom.css.scss */
+/* line 147, ../../app/assets/stylesheets/custom.css.scss */
 .user_avatars .gravatar {
   margin: 1px 1px;
 }
 
-/* line 152, ../../app/assets/stylesheets/custom.css.scss */
+/* line 153, ../../app/assets/stylesheets/custom.css.scss */
 aside section {
   float: left;
   /*padding: 10px 0;
   border-top: 1px solid $grayLighter;*/
 }
-/* line 156, ../../app/assets/stylesheets/custom.css.scss */
+/* line 157, ../../app/assets/stylesheets/custom.css.scss */
 aside section:first-child {
   border: 0;
   padding-top: 0;
 }
-/* line 160, ../../app/assets/stylesheets/custom.css.scss */
+/* line 161, ../../app/assets/stylesheets/custom.css.scss */
 aside section span {
   display: block;
   margin-bottom: 3px;
   line-height: 1;
 }
-/* line 165, ../../app/assets/stylesheets/custom.css.scss */
+/* line 166, ../../app/assets/stylesheets/custom.css.scss */
 aside section h1 {
   font-size: 1.6em;
   text-align: left;
@@ -8690,14 +8698,14 @@ aside section h1 {
   margin-bottom: 3px;
 }
 
-/* line 174, ../../app/assets/stylesheets/custom.css.scss */
+/* line 175, ../../app/assets/stylesheets/custom.css.scss */
 .gravatar {
   float: left;
   margin-right: 10px;
 }
 
 /* forms */
-/* line 181, ../../app/assets/stylesheets/custom.css.scss */
+/* line 182, ../../app/assets/stylesheets/custom.css.scss */
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbbbbb;
   width: 100%;
@@ -8709,40 +8717,40 @@ input, textarea, select, .uneditable-input {
   box-sizing: border-box;
 }
 
-/* line 190, ../../app/assets/stylesheets/custom.css.scss */
+/* line 191, ../../app/assets/stylesheets/custom.css.scss */
 #error_explanation {
   color: #f00;
 }
-/* line 192, ../../app/assets/stylesheets/custom.css.scss */
+/* line 193, ../../app/assets/stylesheets/custom.css.scss */
 #error_explanation ul {
   list-style: none;
   margin: 0 0 18px 0;
 }
 
 /* users index */
-/* line 205, ../../app/assets/stylesheets/custom.css.scss */
+/* line 206, ../../app/assets/stylesheets/custom.css.scss */
 .users {
   list-style: none;
   margin: 0;
 }
-/* line 208, ../../app/assets/stylesheets/custom.css.scss */
+/* line 209, ../../app/assets/stylesheets/custom.css.scss */
 .users li {
   overflow: auto;
   padding: 10px 0;
   /* border-top: 1px solid $grayLighter; */
 }
-/* line 212, ../../app/assets/stylesheets/custom.css.scss */
+/* line 213, ../../app/assets/stylesheets/custom.css.scss */
 .users li:last-child {
   /* border-bottom: 1px solid $grayLighter; */
 }
 
 /* microposts */
-/* line 220, ../../app/assets/stylesheets/custom.css.scss */
+/* line 221, ../../app/assets/stylesheets/custom.css.scss */
 .microposts {
   list-style: none;
   margin: 10px 0 0 0;
 }
-/* line 224, ../../app/assets/stylesheets/custom.css.scss */
+/* line 225, ../../app/assets/stylesheets/custom.css.scss */
 .microposts li {
   padding: 10px 0;
   width: 940px;
@@ -8750,29 +8758,29 @@ input, textarea, select, .uneditable-input {
   /*border-top: 1px solid #e8e8e8; */
 }
 
-/* line 232, ../../app/assets/stylesheets/custom.css.scss */
+/* line 233, ../../app/assets/stylesheets/custom.css.scss */
 .content {
   display: block;
 }
 
-/* line 235, ../../app/assets/stylesheets/custom.css.scss */
+/* line 236, ../../app/assets/stylesheets/custom.css.scss */
 .timestamp {
   color: #999999;
 }
 
-/* line 238, ../../app/assets/stylesheets/custom.css.scss */
+/* line 239, ../../app/assets/stylesheets/custom.css.scss */
 .gravatar {
   float: left;
   margin-right: 10px;
 }
 
-/* line 243, ../../app/assets/stylesheets/custom.css.scss */
+/* line 244, ../../app/assets/stylesheets/custom.css.scss */
 aside textarea {
   /*height: 100px;*/
   margin-bottom: 5px;
 }
 
-/* line 249, ../../app/assets/stylesheets/custom.css.scss */
+/* line 250, ../../app/assets/stylesheets/custom.css.scss */
 .span4 {
   /*width: 940px;*/
   width: 100%;
@@ -8781,49 +8789,49 @@ aside textarea {
   border-bottom: 1px solid #eaeaea;
 }
 
-/* line 257, ../../app/assets/stylesheets/custom.css.scss */
+/* line 258, ../../app/assets/stylesheets/custom.css.scss */
 .span8 {
   width: 940px;
   height: 550px;
 }
 
-/* line 263, ../../app/assets/stylesheets/custom.css.scss */
+/* line 264, ../../app/assets/stylesheets/custom.css.scss */
 #slider {
   vertical-align: middle;
   width: 940px;
 }
 
-/* line 269, ../../app/assets/stylesheets/custom.css.scss */
+/* line 270, ../../app/assets/stylesheets/custom.css.scss */
 #content-slider {
   width: 940px;
   height: 650px;
 }
 
-/* line 274, ../../app/assets/stylesheets/custom.css.scss */
+/* line 275, ../../app/assets/stylesheets/custom.css.scss */
 .sect_prof {
   width: 180px;
 }
 
-/* line 275, ../../app/assets/stylesheets/custom.css.scss */
+/* line 276, ../../app/assets/stylesheets/custom.css.scss */
 .sect_stats {
   width: 155px;
 }
 
-/* line 276, ../../app/assets/stylesheets/custom.css.scss */
+/* line 277, ../../app/assets/stylesheets/custom.css.scss */
 .sect_form {
   width: 60%;
 }
-/* line 278, ../../app/assets/stylesheets/custom.css.scss */
+/* line 279, ../../app/assets/stylesheets/custom.css.scss */
 .sect_form textarea {
   margin-right: 5px;
   width: 84%;
   height: 56px;
 }
-/* line 283, ../../app/assets/stylesheets/custom.css.scss */
+/* line 284, ../../app/assets/stylesheets/custom.css.scss */
 .sect_form input {
   margin-bottom: 0px;
 }
-/* line 287, ../../app/assets/stylesheets/custom.css.scss */
+/* line 288, ../../app/assets/stylesheets/custom.css.scss */
 .sect_form form {
   margin-bottom: 0px;
 }
@@ -10249,6 +10257,10 @@ COMMON SLIDER STYLING
 	margin: 0;
 }
 
+::-webkit-scrollbar { 
+    display: none; 
+}
+
 /***********************
 COMMON SLIDER STYLING
 ***********************/
@@ -10291,7 +10303,8 @@ COMMON SLIDER STYLING
 .anythingSlider .panel {
 	background: transparent;
 	display: block;
-	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: scroll;
 	float: left;
 	padding: 0;
 	margin: 0;

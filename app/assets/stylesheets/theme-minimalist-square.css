@@ -220,6 +220,10 @@
 	margin: 0;
 }
 
+::-webkit-scrollbar { 
+    display: none; 
+}
+
 /***********************
 COMMON SLIDER STYLING
 ***********************/
@@ -262,7 +266,8 @@ COMMON SLIDER STYLING
 .anythingSlider .panel {
 	background: transparent;
 	display: block;
-	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: scroll;
 	float: left;
 	padding: 0;
 	margin: 0;
