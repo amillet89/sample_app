@@ -3,4 +3,4 @@
 //= require jquery_ujs
 //= require jquery.anythingslider
 
-//= require linkPreview
+//= require bootstrap-linkpreview.js
