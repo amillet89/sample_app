@@ -6,15 +6,9 @@
   <%= f.submit "Post", class: "btn btn-large btn-primary" %>
   </div>
   <script>
-   var link = {
-      init: function() {
   		$('textarea').linkpreview({
-  				//previewContainer: ".microposts"
-  		});
-
-  	} }
-
-  	$(window).load( link.init )
+  				previewContainer: ".microposts"
+  		})
 
   </script>
 
