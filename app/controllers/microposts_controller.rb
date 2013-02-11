@@ -4,6 +4,16 @@ class MicropostsController < ApplicationController
 
   def create
     @micropost = current_user.microposts.build(params[:micropost])
+
+    content = @micropost.content
+
+    urlRegExp = "/((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)/"
+
+    content = content.sub(urlRegExp, "<iframe src='#{content}' height='300' width='700'> </iframe>")
+
+    @micropost.content = content
+    #@micropost(:content).addIframe
+
     if @micropost.save
       flash[:success] = "Micropost created!"
       redirect_to root_path
